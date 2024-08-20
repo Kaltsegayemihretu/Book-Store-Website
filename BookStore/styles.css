@@ -1,0 +1,1193 @@
+/* Font Face Definition */
+@font-face {
+    font-family: poppins; /* Defines the font-family name */
+    src: url(assets/Poppins-Regular.ttf); /* Path to the font file */
+}
+
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: poppins; /* Applies the Poppins font to the entire document */
+    scrollbar-width: thin; /* Custom scrollbar width */
+}
+
+/* Header Styles */
+header {
+    position: relative;
+    width: 100%;
+    background-color: #ffffff; /* White background for the header */
+    color: #000000; /* Black text color */
+    height: 100px; /* Fixed header height */
+}
+
+/* Navigation Container */
+.nav-container {
+    display: flex;
+    align-items: center; /* Vertically center items */
+    padding: 10px;
+    position: relative;
+}
+
+/* Hamburger Menu Button */
+.hamburger {
+    display: block;
+    font-size: 1.5em;
+    background: #5285e8; /* Blue background */
+    border: none;
+    color: #fff; /* White text color */
+    cursor: pointer;
+    margin-right: 10px; 
+    border-radius: 5px;
+    height: 35px; /* Fixed height */
+}
+
+/* Logo Styling */
+.logo {
+    font-size: 1.5em;
+    flex: 1; /* Takes up remaining space */
+}
+
+/* Navigation Icons */
+.nav-icons {
+    display: flex;
+    align-items: center;
+}
+
+/* Individual Icon Styling */
+.icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* Icon Images */
+.icon img {
+    width: 30px; /* Fixed icon width */
+}
+
+/* Search Box Styling */
+.search-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid; /* Border around the search box */
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 7px;
+    width: 370px; /* Fixed width */
+    height: 20px; /* Fixed height */
+    margin: 0px auto; /* Centers the search box */
+}
+
+/* Input Field inside Search Box */
+.search-box input {
+    border: none;
+    outline: none;
+    padding: 15px;
+    border-radius: 10px;
+    flex: 1; /* Takes up remaining space */
+    background-color: #ffffff; /* White background */
+}
+
+/* Search Button Styling */
+.search-box button {
+    background: transparent;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Side Menu Styles */
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: 0; 
+    width: 250px; /* Fixed width */
+    height: 100%; /* Full height */
+    background-color: #b4ccfa; /* Light blue background */
+    color: #fff; /* White text color */
+    z-index: 999; /* Ensures the side menu appears above other elements */
+    transform: translateX(-100%); /* Initially hidden off-screen */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    padding: 30px;
+}
+
+/* When the Side Menu is Open */
+.side-menu.open {
+    transform: translateX(0); /* Slides the menu into view */
+}
+
+/* Menu Title Styling */
+.menu-title {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+/* Close Button for Side Menu */
+.close-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2em;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+/* Navigation List inside Side Menu */
+nav ul {
+    list-style: none; /* Removes default list styling */
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 20px 0; /* Adds space between list items */
+}
+
+/* Links inside Navigation List */
+nav ul li a {
+    color: #fff; /* White text color */
+    text-decoration: none; /* Removes underline */
+    font-size: 1.2em; /* Larger font size */
+    display: block;
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+/* Hover State for Links */
+nav ul li a:hover {
+    color: #ddd; /* Light gray color on hover */
+}
+
+/* Newsletter Section Styling */
+.newsletter {
+    color: #000000; /* Black text color */
+    padding: 40px;
+    text-align: center;
+    max-width: 600px;
+    margin: 0px auto;
+}
+
+.newsletter h1 {
+    font-size: 28px; /* Large font size */
+    margin-bottom: 20px;
+}
+
+.newsletter p {
+    font-size: 18px; /* Medium font size */
+    margin-bottom: 30px;
+}
+
+/* Form inside Newsletter */
+.newsletter form {
+    display: flex;
+    justify-content: center; /* Center the form */
+    flex-wrap: wrap; /* Wrap the form fields */
+    gap: 10px; /* Space between form fields */
+}
+
+.newsletter input[type="email"] {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    width: 70%;
+    max-width: 300px;
+    border: 1px solid #5285e8; /* Blue border */
+}
+
+.newsletter input[type="submit"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #5285e8; /* Blue background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Footer Styling */
+footer {
+    padding: 60px 13% 200px;
+    background: #bdd0f7; /* Light blue background */
+}
+
+/* Footer Layout using Grid */
+.footer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, auto));
+    gap: 4rem;
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    bottom: 0;
+}
+
+/* Footer Heading Styling */
+.footer h2 {
+    color: #fff;
+    margin-bottom: 2rem;
+    font-family: sans-serif;
+}
+
+/* Footer Content Heading */
+.footer-content h4 {
+    color: #fff;
+    margin-bottom: 1.5rem;
+    font-family: sans-serif;
+}
+
+/* Last Footer Content Block */
+.footer-content:last-child {
+    margin-left: 0px; 
+}
+
+/* Links in Footer */
+.footer-content a {
+    display: block;
+    color: #050505; /* Dark gray text color */
+    font-size: 15px;
+    text-decoration: none;
+    font-weight: 400;
+    transition: all 0.4s ease; /* Smooth transition */
+}
+
+.footer-content a:hover {
+    transform: translateY(-3px) translateX(-5px); /* Moves the link slightly on hover */
+    color: #5285e8; /* Blue color on hover */
+}
+
+.footer p {
+    color: #000000; /* Black text color */
+    font-size: 16px;
+}
+
+/* Social Icons in Footer */
+.icons {
+    display: flex;
+    font-size: 22px;
+    color: #edf7f6;
+    padding-top: 20px;
+}
+
+.footer img {
+    width: 20px; 
+    height: auto; 
+    margin-right: 10px; 
+    filter: invert(); /* Inverts the color of the icon */
+    transition: all 0.4s ease; /* Smooth transition */
+}
+
+/* Hover Effect for Icons */
+.icons img:hover {
+    transform: translateY(-7px); /* Moves the icon slightly on hover */
+}
+
+/* Web Rights Section */
+.webRights {
+    position: absolute;
+    text-align: center;
+    background: #000000; /* Black background */
+    color: #ffffff; /* White text color */
+    width: 100%; 
+    height: 30px;
+    padding-top: 10px;
+}
+
+/* Hidden Elements for Specific Screens */
+#location-icon,
+#nav-fav-icon,
+.can-we-help-you,
+.author,
+#nav-line,
+.pc-screen-nav,
+.webRights {
+    display: none;
+}
+
+/* Shop Section Styling */
+#shop {
+    height: 7720px; /* Fixed height */
+}
+
+.shop h3 {
+    margin-left: 40px; /* Space to the left of the heading */
+}
+
+.shop {
+    position: absolute;
+    top: 100px; /* Position the shop section relative to the top */
+}
+
+/* Price Filter Styling */
+.filter-price {
+    border: 1px solid #555; /* Dark gray border */
+    height: 170px; /* Fixed height */
+    width: 371px; /* Fixed width */
+    padding: 10px;
+    margin: 10px;
+}
+
+/* Filter Button Styling */
+.filter-price button {
+    position: absolute;
+    top: 130px;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background: #5285e8; /* Blue background */
+    color: white;
+    font-size: large;   
+}
+
+/* Range Input Styling */
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 300px;
+    height: 10px;
+    background: #ddd; /* Light gray background */
+    border-radius: 5px;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity 0.15s ease-in-out;
+}
+
+/* Range Input Thumb Styling */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 13px;
+    height: 35px;
+    background: #5285e8; /* Blue background */
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+/* Overlay for Popups */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    visibility: hidden; /* Initially hidden */
+    opacity: 0;
+    transition: visibility 0.3s, opacity 0.3s; /* Smooth fade-in */
+    z-index: 999; 
+}
+
+/* Show Overlay */
+.overlay.show {
+    visibility: visible;
+    opacity: 1; 
+}
+
+/* Login Form Styling */
+.login-form {
+    background: linear-gradient(135deg, #e0eaff, #c2d2f0); /* Light blue gradient */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    padding: 30px;
+    margin-right: -100px;
+    width: 300px;
+    position: fixed; 
+    top: 40%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    z-index: 1000; 
+    color: #333; 
+    display: none; /* Initially hidden */
+}
+
+/* Show Login Form */
+.login-form.show {
+    display: block; 
+}
+
+/* Close Button Styling for Login Form */
+.close-btn {
+    font-size: 24px;
+    color: #333; 
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+/* Input Container in Login Form */
+.input-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 10px; 
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #f9f9f9; /* Very light gray background */
+}
+
+/* Icon Inside Input Container */
+.input-container i {
+    color: #5285e8; /* Blue color for icons */
+    margin-right: 10px;
+}
+
+/* Input Field Styling */
+.input-container input {
+    border: none;
+    outline: none;
+    flex: 1;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 10px; 
+    background-color: #fff; /* White background */
+}
+
+/* Button Container */
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Button Styling in Login Form */
+.button-container button {
+    background-color: #5285e8; /* Blue background */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover State for Buttons */
+.button-container button:hover {
+    background-color: #416bbf; /* Darker blue on hover */
+}
+
+/* Signup Form Styling */
+.signup-form {
+    background: linear-gradient(135deg, #e0eaff, #c2d2f0); 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    padding: 40px;
+    width: 350px;
+    position: fixed; 
+    top: 40%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    z-index: 1000; 
+    color: #333; 
+    display: none; 
+}
+
+/* Show Signup Form */
+.signup-form.show {
+    display: block; 
+}
+
+/* Signup Form Title */
+.signup-form__title {
+    color: #5285e8; /* Blue color */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Individual Fields in Signup Form */
+.signup-form__field {
+    margin-bottom: 15px;
+}
+
+/* Label Styling in Signup Form */
+.signup-form__label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333; 
+}
+
+/* Input Fields in Signup Form */
+.signup-form__input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+}
+
+/* Button Container in Signup Form */
+.signup-form__button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Signup Button Styling */
+.signup-form__button {
+    background-color: #5285e8;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover State for Signup Button */
+.signup-form__button:hover {
+    background-color: #416bbf;
+}
+
+/* Signup Form Text */
+.signup-form__text {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Links in Signup Form */
+.signup-form__link {
+    color: #5285e8;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Hover State for Links */
+.signup-form__link:hover {
+    color: #416bbf;
+}
+
+/* Overlay for Cart Slide */
+.overlay2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 999;
+    display: none; 
+}
+
+/* Cart Slide Styling */
+.cart-slide {
+    position: fixed;
+    top: 0;
+    right: 0; 
+    width: 330px;
+    height: 100%;
+    background-color: white; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transform: translateX(100%); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    padding: 20px; 
+    z-index: 1000; 
+    overflow-y: auto; 
+}
+
+/* Open State for Cart Slide */
+.cart-slide.open {
+    transform: translateX(0); 
+}
+
+/* Close Button in Cart Slide */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px; 
+    cursor: pointer;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #333; 
+}
+
+/* Book Cart Styling */
+.bookcart {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+}
+
+/* Individual Book Item in Cart */
+.book-item {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+    border-bottom: 1px solid #ddd; 
+    padding-bottom: 10px;
+}
+
+/* Book Image in Cart */
+.book-image {
+    width: 80px; 
+    height: 120px;
+    object-fit: cover;
+}
+
+/* Book Details in Cart */
+.book-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; 
+}
+
+/* Book Type in Cart */
+.book-type {
+    font-style: italic;
+    color: #555; 
+}
+
+/* Book Title in Cart */
+.book-title {
+    font-weight: bold;
+}
+
+/* Book Author in Cart */
+.book-author {
+    color: #777; 
+}
+
+/* Book Amount in Cart */
+.book-amount {
+    color: #333; 
+}
+
+/* Book Price in Cart */
+.book-price {
+    font-weight: bold;
+    color: #000; 
+}
+
+/* Cart Summary Styling */
+.cart-summary {
+    padding: 15px; 
+    border-top: 1px solid #ddd;
+    background-color: #f9f9f9;
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - 20px); 
+}
+
+/* Subtotal Text in Cart Summary */
+.subtotal {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Cart Buttons Styling */
+.cart-button {
+    display: block;
+    width: calc(50% - 10px); 
+    margin: 10px 5px; 
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff; /* Blue background */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center; 
+}
+
+/* Hover State for Cart Buttons */
+.cart-button:hover {
+    background-color: #0056b3; 
+}
+
+/* View Cart Button */
+#view-cart {
+    margin-right: 10px; 
+}
+
+/* Shop Elements for Larger Screens */
+.shop-pc-only {
+    display: none;
+}
+
+/* Last Footer Section */
+#last {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f1f1f1; /* Light gray background */
+    padding: 10px;
+    text-align: center; 
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1); 
+    z-index: 1000; 
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    #homepage{
+        height: 3600px;
+    }
+    header{
+        height: 60px;
+    }
+    .search-box{
+        margin-top: -45px;
+        margin-left: 230px;
+        width: 350px;
+    }
+
+    #cart-icon img{
+        width: 30px;
+    }
+
+    .hero-section img{
+        margin-left: 190px;
+        margin-top: 50px;
+    }
+
+    .hero-section button{
+        margin-left: 230px;
+    }
+
+    .hero-section{
+        height: 600px;
+    }
+
+    #container{
+        max-width: 800px;
+        width: 700px;
+    }
+
+    #inner_container {
+        width: 100%; /* Take up the full width of the container */
+        max-width: 1024px; /* Adjust based on your tablet design */
+    }
+
+    /* Adjust the image container width for three images */
+    .img_container {
+        min-width: calc(100% / 2); /* Each image container takes up one-third of the container */
+    }
+    .img_container img{
+        margin-left: 100px;
+    }
+    .bestseller-add-btn{
+        gap: 20px;
+    }
+
+    .shop-container {
+        grid-template-columns: repeat(3, 0fr); /* Three columns for tablet and larger screens */
+        margin-left: 80px;
+    }
+
+    .banner{
+        display: flex;
+        width: 100%;
+        height: 400px;
+        margin-top: 10px;
+    }
+
+    .banner-right{
+        margin-top: 50px;
+    }
+
+    #author-container{
+        max-width: 100%;
+    }
+    
+    #author-navigation button{
+        margin-left: 100px;
+        margin-right:100px ;
+    }
+    .filter-price{
+        margin-left: 90px;
+        width: 550px;
+    }
+
+    #shop{
+        height: 1800px;
+    }
+
+    .shop h3{
+        margin-left:100px ;
+    }
+
+    footer{
+        padding: 60px 13% 350px;
+    }
+
+    #location-icon, #nav-fav-icon{
+        display: none;
+    }
+
+    .can-we-help-you{
+        display: none;
+    }
+
+    .author{
+        display: none;
+    }
+
+    #nav-line{
+        display: none;
+    }
+    .pc-screen-nav{
+        display: none;
+    }
+
+    .webRights{
+        display: none;
+    }
+
+    .login-form{
+        width: 500px;
+        height: 400px;
+        font-size: larger;
+    }
+    .button-container button { 
+        text-align: center;
+        width: 100%;
+        margin-top: 30px;
+    }
+    .login-container button {
+        font-size: larger;
+    }
+
+    .signup-form {
+        
+        height: 800px;
+        width: 400px;
+        top: 39%; /* Center vertically */
+        left: 50%; /* Center horizontally */
+        font-size: larger;
+    }
+    .signup-form__button-container {
+        text-align: center;
+        width: 100%;
+
+        margin-top: 20px;
+    }
+    
+    .signup-form__button {
+
+        width: 100%;
+        margin-top: 40%;
+        font-size: larger;
+    }
+
+    .cart-slide {
+        width: 600px;
+        font-size: large;
+    }
+
+    .shop-pc-only{
+        display: none;
+    }
+
+}
+
+@media (min-width: 1024px){
+    #homepage{
+        height: 3000px;
+    }
+    header{
+        height: 110px;
+    }
+
+    .search-box{
+        margin-right: 10px;
+    }
+    #location-icon, #nav-fav-icon{
+        display: block;
+    }
+
+    .nav-container .hamburger{
+        position: absolute;
+        top: 60px;
+        left: 100px;
+    }
+
+    .nav-container .logo{
+        position: absolute;
+        top: 60px;
+        left:150px ;
+    }
+
+    body{
+        overflow-x: hidden;
+        background: rgb(249, 249, 251);
+    }
+
+    .nav-icons{
+        margin-top:-10px ;
+    }
+    .can-we-help-you{
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        margin-left: 50px;
+        margin-right: 940px;
+    }
+    #nav-line{
+        display: block;
+        position: absolute;
+        top: 40px;
+        width: 100%;
+        background: #e8ebf1;
+    }
+    .icon img{
+        width: 24px;
+    }
+
+    .pc-screen-nav {
+        position: absolute;
+        top: 60px;
+        display: flex;
+        gap: 55px;
+        margin-left: 350px;
+    }
+    
+    .pc-screen-nav a {
+        position: relative;
+        text-decoration: none;
+        color: black;
+        padding: 10px;
+    }
+    
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        z-index: 1;
+        flex-direction: column;
+        min-width: 200px;
+    }
+    
+    .dropdown-content a {
+        padding: 5px 10px;
+        text-decoration: none;
+        color: black;
+    }
+    
+    .pc-screen-nav a:hover .dropdown-content {
+        display: block;
+    }
+     
+    .hero-section{
+        height: 630px;
+        display: flex;
+        justify-content: center;
+        gap: 100px;
+    }
+
+    .hero-section-left{
+        order: 1;
+        margin-top: 100px;
+    }
+
+    .hero-section-right{
+        margin-top: 150px;
+    }
+
+    .hero-section h1{
+        text-align: left;
+        font-size: 70px;
+        margin-top: -80px;
+    }
+
+    .hero-section h5{
+        text-align: left;
+        font-size: 20px;
+        color: #888;
+    }
+
+    .hero-section p{
+        text-align: left;
+        font-size: 50px;
+        margin-top: -40px;
+    }
+    
+    .hero-section-right #shop-now-btn{
+        position: absolute;
+        top: 520px;
+        left: 70px;
+    }
+
+    .hero-section-left img{
+        width: 600px;
+    }
+
+    .featured-categories{
+        overflow: hidden;
+    }
+
+    .featured-container{
+        width: 240px;
+    }
+
+    #container{
+        max-width: 1500px;
+    }
+
+    #inner_container {
+        width: 100%; /* Take up the full width of the container */
+    }
+
+
+        /* Adjust the image container width for three images */
+         .img_container {
+            min-width: calc(100% / 4); /* Each image container takes up one-third of the container */
+        }
+        .img_container img{
+            margin-left: 100px;
+        }
+        .bestseller-add-btn{
+            gap: 50px;
+        }
+
+        .shop-container {
+            grid-template-columns: repeat(6, 0fr); /* Three columns for tablet and larger screens */
+            margin-left: 80px;
+        }
+        .shop-card{
+            height: 390px;
+            width: 190px;
+        }
+
+        .shop-card img {
+            width: 175px;
+            object-fit: cover;
+        }
+
+        .shop-card:hover{
+            background-color: white;
+            transform: scale(1.02);
+            border: 1px solid black;
+        }
+
+        .new-release-wrapper{
+            display: flex;
+            gap: 0px;
+            padding: 30px;
+        }
+
+        .new-releases-left .shop-container{
+            grid-template-columns: repeat(4, 0fr); /* Three columns for tablet and larger screens */
+        }
+
+        .new-releases-right{
+            margin-top: 15px;
+            margin-left: 17px;
+        }
+
+        .banner{
+            width: 500px;
+            height: 863px;
+            border: 1px solid #888;
+        }
+
+        .banner-left{
+            margin-left: 50px;
+            margin-top: 70px;
+        }
+
+        .banner-right{
+            margin-left:50px ;
+        }
+
+        .new-releases-left{
+            margin-left: -86px;
+        }
+        .author{
+            display: block;
+        }
+
+        .fav-authors{
+            display: none;
+        }
+        
+        .fav-authors-pc{
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+        }
+
+        .author-display-pc img{
+            width: 200px;
+            height:200px;
+            border-radius: 50%;
+        }
+
+        .author-display-pc h4,h5{
+            text-align: center;
+        }
+
+        .author-display-pc h5{
+            color: #888;
+            margin-top: -20px;
+        }
+
+        footer{
+            padding: 60px 13% 50px;
+        }
+
+        .webRights{
+            display: none;
+        }
+        
+        .login-form{
+            width: 700px;
+            height: 500px;
+            font-size: larger;
+        }
+        .button-container button { 
+            text-align: center;
+            width: 100%;
+            margin-top: 50px;
+        }
+        .login-container button {
+            font-size: larger;
+        }
+
+        .signup-form {
+            top: 50%; /* Center vertically */
+            left: 50%; /* Center horizontally */
+            height:600px;
+            width: 600px;
+            font-size: larger;
+        }
+        .signup-form__button-container {
+            text-align: center;
+            width: 100%;
+            overflow: hidden;
+        }
+        
+        .signup-form__button {
+    
+            width: 100%;
+            margin-top: 1%;
+            font-size: larger;
+        }
+        .cart-slide {
+            width: 600px;
+            font-size: larger;
+        }
+
+        .filter-price{
+            margin-left: 90px;
+            width: 1368px;
+        }
+    
+        #shop{
+            height: 800px;
+        }
+    
+        .shop h3{
+            margin-left:100px ;
+        }
+
+        .shop-pc-only{
+            display: block;
+        }
+    
+}

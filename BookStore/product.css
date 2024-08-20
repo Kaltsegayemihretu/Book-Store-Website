@@ -1,0 +1,99 @@
+/* Container for showcasing the product */
+.product-showcase {
+    display: flex; /* Use flexbox for horizontal alignment */
+}
+
+/* Product container styling */
+.product {
+    margin-left: 100px; /* Adds space to the left of the product container */
+}
+
+/* Image container styling */
+.images {
+    border: 1px solid #ccc; /* Light gray border around the image container */
+    width: 600px; /* Fixed width for the image container */
+    height: 600px; /* Fixed height for the image container */
+}
+
+/* Image styling within the container */
+.images img {
+    width: 300px; /* Fixed width for the image */
+    padding-left: 130px; /* Padding to center the image horizontally */
+    padding-top: 80px; /* Padding to center the image vertically */
+}
+
+/* Product details container styling */
+.product-details {
+    border: 1px solid #ccc; /* Light gray border around the details container */
+    width: 700px; /* Fixed width for the details container */
+    height: 600px; /* Fixed height for the details container */
+}
+
+/* Padding inside the product details container */
+.details {
+    padding: 40px; /* Adds padding inside the details container */
+}
+
+/* Navigation for product options (e.g., size, color) */
+.proNavigation {
+    display: flex; /* Flexbox for horizontal alignment */
+    gap: 50px; /* Space between navigation items */
+}
+
+/* Horizontal rule within product details */
+.details hr {
+    width: 80%; /* Width of the horizontal rule */
+}
+
+/* Container for quantity selector */
+.counter-container {
+    display: flex; /* Flexbox layout for horizontal alignment */
+    align-items: center; /* Center items vertically */
+    border: 2px solid #ccc; /* Light gray border around the counter */
+    border-radius: 5px; /* Rounded corners */
+    overflow: hidden; /* Hide any overflow content */
+    width: 130px; /* Fixed width for the counter container */
+}
+
+/* Buttons within the counter container */
+.counter-container button {
+    background-color: transparent; /* Transparent background */
+    color: black; /* Black text color */
+    border: none; /* Remove default button borders */
+    padding: 10px 15px; /* Padding inside buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 18px; /* Font size for button text */
+}
+
+.counter-container button:focus {
+    outline: none; /* Remove focus outline */
+}
+
+/* Display value for the counter */
+#counter-value {
+    font-size: 20px; /* Larger font size for the counter value */
+    text-align: center; /* Center text horizontally */
+    min-width: 50px; /* Minimum width to ensure visibility */
+    color: #ccc; /* Light gray text color */
+}
+
+/* Action buttons container (e.g., Add to Cart, Buy Now) */
+.action-btn {
+    display: flex; /* Flexbox layout for horizontal alignment */
+    gap: 30px; /* Space between action buttons */
+}
+
+/* Styling for the 'Add to Cart' button */
+#action-btn-cart {
+    width: 150px; /* Fixed width for the button */
+    height: 50px; /* Fixed height for the button */
+    background: #dbe7ff; /* Light blue background color */
+    border: none; /* Remove default button border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: larger; /* Larger font size for button text */
+}
+
+/* Additional styling for the product detail menu */
+.product-detail-menu {
+    margin-top: 50px; /* Adds space above the product detail menu */
+}

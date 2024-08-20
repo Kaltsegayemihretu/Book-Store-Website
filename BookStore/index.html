@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOOKSTORE</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="homepage.css">
+
+    
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+
+            <button class="hamburger" id="hamburger-menu">☰</button>
+            <div class="logo">Bookstore</div>
+            <div class="nav-icons">
+                <!-- Replace with your custom icon images -->
+                <div class="can-we-help-you">
+                  <p>Can we help you?</p>
+                  <p>+25193934242</p>
+                </div>
+                <button class="icon" id="location-icon">
+                  <img src="assets/location-pin-svgrepo-com (1).svg" alt="Cart">
+              </button>               
+              <button class="icon" id="nav-fav-icon">
+                <img src="assets/heart-3510.svg" alt="Cart">
+            </button>
+                <button class="icon" id="cart-icon">
+                    <img src="assets/cart.png" alt="Cart">
+                </button>
+                <button class="icon" id="profile-icon">
+                    <img src="assets/profilePng.png" alt="Profile">
+                </button>
+            </div>
+        </div>
+        <hr id="nav-line">
+        <div class="search-box">
+            <input type="text" placeholder="Search..." id="searchInput">
+            <button id="searchBtn"><img src="assets/search-icon.png" style="width: 20px;" alt="search-icon"></button>
+        </div>  
+        <div class="pc-screen-nav">
+          <a href="#"  id="HomeButton">Home
+              <div class="dropdown-content">
+                  <a href="#">Sub-link 1</a>
+                  <a href="#">Sub-link 2</a>
+                  <a href="#">Sub-link 3</a>
+              </div>
+          </a>
+          <a href="#">Categories</a>
+          <a href="#" class="shop-button" id="shopButton">Shop
+              <div class="dropdown-content">
+                  <a href="#">Sub-link 1</a>
+                  <a href="#">Sub-link 2</a>
+                  <a href="#">Sub-link 3</a>
+              </div>
+          </a>
+          <a href="#">Pages
+              <div class="dropdown-content">
+                  <a href="#">Sub-link 1</a>
+                  <a href="#">Sub-link 2</a>
+                  <a href="#">Sub-link 3</a>
+              </div>
+          </a>
+          <a href="#">Blog
+              <div class="dropdown-content">
+                  <a href="#">Sub-link 1</a>
+                  <a href="#">Sub-link 2</a>
+                  <a href="#">Sub-link 3</a>
+              </div>
+          </a>
+          <a href="#">Others
+              <div class="dropdown-content">
+                  <a href="#">Sub-link 1</a>
+                  <a href="#">Sub-link 2</a>
+                  <a href="#">Sub-link 3</a>
+              </div>
+          </a>
+      </div>
+      
+        <div class="side-menu" id="side-menu">
+            <button class="close-btn" id="close-menu">×</button>
+            <div class="menu-title">Menu</div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="shome">Home</a></li>
+                    <li><a href="#" class="s-shop">Shop</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div id="popup" class="hidden">
+      <p>Item was added to cart!</p>
+    </div>
+    <div class="overlay"></div>
+
+    <div class="login-form">
+      <div class="close-btn">&times;</div>
+        <h1 style="text-align: center;">BookStore</h1> 
+        <form action="#">
+            <div class="input-container">
+                <i class="fas fa-user"></i>
+                <input type="text" id="username" name="username" placeholder="Username" required>
+            </div>
+            
+     
+            
+            <div class="input-container">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+            </div>
+            
+    
+            
+            <div class="button-container">
+                <button type="submit" name="login">Log In</button>
+            </div>
+            <br><br>
+            <div class="login-container">
+                <p>Don't have an account? <button id="signupbtn" style="border:none;" >Sign up</button> </p>
+               
+            </div>
+        </form>
+    </div>
+
+    <div class="signup-form">
+      <div class="close-btn" id="closeBtn">&times;</div>
+  
+      <h1 class="signup-form__title">Create Your Account</h1>
+      <form id="signupForm" class="signup-form__form" action="#" method="post">
+          <div class="signup-form__field">
+              <label for="signup-username" class="signup-form__label">Username:</label>
+              <input type="text" id="signup-username" name="username" class="signup-form__input" placeholder="Enter your username" required>
+          </div>
+          <div class="signup-form__field">
+              <label for="signup-email" class="signup-form__label">Email:</label>
+              <input type="email" id="signup-email" name="email" class="signup-form__input" placeholder="Enter your email" required>
+          </div>
+          <div class="signup-form__field">
+              <label for="signup-password" class="signup-form__label">Password:</label>
+              <input type="password" id="signup-password" name="password" class="signup-form__input" placeholder="Enter your password" required>
+          </div>
+          <div class="signup-form__field">
+              <label for="signup-confirm-password" class="signup-form__label">Confirm Password:</label>
+              <input type="password" id="signup-confirm-password" name="confirm-password" class="signup-form__input" placeholder="Confirm your password" required>
+          </div>
+          <div class="signup-form__button-container">
+              <button type="submit" class="signup-form__button">Sign Up</button>
+          </div>
+      </form>
+      <p class="signup-form__text">Already have an account? <a href="#" id="loginLink" class="signup-form__link">Log in</a></p>
+  </div>
+      
+  <div class="content">
+  <div id="home">
+    <div class="hero-section">
+        <div class="hero-section-left">
+            <img src="assets/hero-banner.png" alt="">
+        </div>
+        <div class="hero-section-right">
+            <h5>THE BOOKWORM EDITORS'</h5>
+            <p>Featured Books of the</p>
+            <h1>August</h1>
+            <button id="shop-now-btn" >Shop Now</button>
+        </div>
+    </div>
+
+    <div class="featured-categories">
+         <h3>Featured Categories</h3>
+        <div class="slider-container">
+            <div class="featured-container">
+                <img src="assets/art-photo-icon.png" alt="">
+                <h2>Arts & Photography</h2>
+                <a href="">Shop Now</a>
+                <hr>
+            </div>
+            <div class="featured-container">
+                <img src="assets/food-icon.png" alt="">
+                <h2>Food & Drink</h2>
+                <a href="">Shop Now</a>
+                <hr>
+            </div>
+            <div class="featured-container">
+                <img src="assets/romance-icon.png" alt="">
+                <h2>Romance</h2>
+                <a href="">Shop Now</a>
+                <hr>
+            </div>
+            <div class="featured-container">
+                <img src="assets/medical.png"  style="width: 40px;" alt="">
+                <h2>Health</h2>
+                <a href="">Shop Now</a>
+                <hr>
+            </div>
+            <div class="featured-container">
+                <img src="assets/biography-icon.png"  style="width: 40px;"  alt="">
+                <h2>Biography</h2>
+                <a href="">Shop Now</a>
+                <hr>
+            </div>
+        </div>
+    </div>
+    <div class="bestseller">
+        <h2>Bestselling Books</h2>
+        <div id="container">
+            <div id="inner_container">
+                <div id="imgs_container">
+                    <div class="img_container">
+                        <img src="assets\DS.png" alt="Book Cover 1">
+                        <h4>Data Science </h1>
+                        <h5>Lilian pierson</h5>
+                        <h6>$30 - $47.8</h5>
+                        <div class="bestseller-add-btn">
+                            <button class="add-to-cart" >Add to Cart</button>
+                            <button id="add-to-fav" ><img src="assets/add-to-favorites.png" alt=""></button>
+                        </div>
+                    </div>
+                    <div class="img_container">
+                        <img src="assets\python.png" alt="Book Cover 1">
+                        <h4>Python </h1>
+                        <h5>Stef maruch</h5>
+                        <h6>$10 - $27.8</h5>
+                        <div class="bestseller-add-btn">
+                            <button class="add-to-cart" >Add to Cart</button>
+                            <button id="add-to-fav" ><img src="assets/add-to-favorites.png" alt=""></button>
+                        </div>
+                    </div>
+                    <div class="img_container">
+                        <img src="assets\jsjq.png" alt="Book Cover 1">
+                        <h4>Javascript & Jquery</h1>
+                        <h5>Jhon</h5>
+                        <h6>$10 - $27.8</h5>
+                        <div class="bestseller-add-btn">
+                            <button class="add-to-cart" >Add to Cart</button>
+                            <button id="add-to-fav" ><img src="assets/add-to-favorites.png" alt=""></button>
+                        </div>
+                    </div>                    
+                    <div class="img_container">
+                        <img src="assets\react.png" alt="Book Cover 1">
+                        <h4>React</h1>
+                        <h5>Robin Wieruch</h5>
+                        <h6>$30 - $47.8</h5>
+                        <div class="bestseller-add-btn">
+                            <button class="add-to-cart" >Add to Cart</button>
+                            <button id="add-to-fav" ><img src="assets/add-to-favorites.png" alt=""></button>
+                        </div>
+                    </div>                    
+                    <div class="img_container">
+                        <img src="assets\dsbo.png" alt="Book Cover 1">
+                        <h4>Data Science</h1>
+                        <h5>Oreilly</h5>
+                        <h6>$10 - $27.8</h5>
+                        <div class="bestseller-add-btn">
+                            <button class="add-to-cart" >Add to Cart</button>
+                            <button id="add-to-fav" ><img src="assets/add-to-favorites.png" alt=""></button>
+                        </div>
+                    </div>
+                    <div class="img_container">
+                        <img src="assets\react.png" alt="Book Cover 1">
+                        <h4>React</h1>
+                        <h5>Robin Wieruch</h5>
+                        <h6>$30 - $47.8</h5>
+                        <div class="bestseller-add-btn">
+                            <button class="add-to-cart" >Add to Cart</button>
+                            <button id="add-to-fav" ><img src="assets/add-to-favorites.png" alt=""></button>
+                        </div>
+                    </div>
+                    <div class="img_container">
+                        <img src="assets\jsjq.png" alt="Book Cover 1">
+                        <h4>Javascript & Jquery</h1>
+                        <h5>Jhon</h5>
+                        <h6>$10 - $27.8</h5>
+                        <div class="bestseller-add-btn">
+                            <button class="add-to-cart" >Add to Cart</button>
+                            <button id="add-to-fav" ><img src="assets/add-to-favorites.png" alt=""></button>
+                        </div>
+                    </div>
+                    <div class="img_container">
+                        <img src="assets\python.png" alt="Book Cover 1">
+                        <h4>python</h1>
+                        <h5>sunn tuz</h5>
+                        <h6>$10 - $7.8</h5>
+                        <div class="bestseller-add-btn">
+                            <button class="add-to-cart" >Add to Cart</button>
+                            <button id="add-to-fav" ><img src="assets/add-to-favorites.png" alt=""></button>
+                        </div>
+                    </div>
+                </div>
+                <div id="overlay">
+                    <div id="left_button" class="overlay_button" onclick="onLeftButton()">&#8249;</div>
+                    <div id="right_button" class="overlay_button" onclick="onRightButton()">&#8250;</div>
+                </div>
+            </div>
+    </div>
+    
+    <div class="featured">
+        <h2>Featured Books</h2>
+        <div class="subNavigation">
+            <a class="active-link" href="">Featured</a>
+            <a class="active-link" href="">On sale</a>
+            <a class="active-link" href="">Most Viewed</a>
+        </div>
+        <div class="shop-container">
+                       <div class="shop-card">
+                <img src="assets/harry potter.jpg" alt="harry potter">
+                <h4>Harry Potter</h4>
+                <h5>Rowling</h5>
+                <h6>$30 - $27.8</h6>
+                <div class="shop-add-btn">
+                    <button class="add-to-cart" >Add to Cart</button>
+                    <button id="add-to-fav-shop"><img src="assets/add-to-favorites.png" alt=""></button>
+                </div>
+            </div>
+            <div class="shop-card">
+                <img src="assets\The Color of Everything.png" alt="art of war">
+                <h4>The color of Everything</h4>
+                <h5>Cory</h5>
+                <h6>$11 - $27.8</h6>
+                <div class="shop-add-btn">
+                    <button class="add-to-cart" >Add to Cart</button>
+                    <button id="add-to-fav-shop"><img src="assets/add-to-favorites.png" alt=""></button>
+                </div>
+            </div>
+            <div class="shop-card">
+                <img src="assets/art of war.jpg" alt="art of war">
+                <h4>Art of War</h4>
+                <h5>sunn tad</h5>
+                <h6>$30 - $47.8</h6>
+                <div class="shop-add-btn">
+                    <button class="add-to-cart" >Add to Cart</button>
+                    <button id="add-to-fav-shop"><img src="assets/add-to-favorites.png" alt=""></button>
+                </div>
+            </div>
+            <div class="shop-card">
+                <img src="assets\rom3.png" alt="lelaSewe">
+                <h4>Note Book</h4>
+                <h5>james</h5>
+                <h6>$10 - $27.8</h6>
+                <div class="shop-add-btn">
+                    <button class="add-to-cart" >Add to Cart</button>
+                    <button id="add-to-fav-shop"><img src="assets/add-to-favorites.png" alt=""></button>
+                </div>
+            </div>
+            <div class="shop-card">
+                <img src="assets\rom4.png" alt="harry potter">
+                <h4>Me before You</h4>
+                <h5>jojo Moyes</h5>
+                <h6>$30 - $47.8</h6>
+                <div class="shop-add-btn">
+                    <button class="add-to-cart" >Add to Cart</button>
+                    <button id="add-to-fav-shop"><img src="assets/add-to-favorites.png" alt=""></button>
+                </div>
+            </div>
+
+            <div class="shop-card">
+                <img src="assets\rom5.png" alt="art of war">
+                <h4>The time Traveler's Wife</h4>
+                <h5>Audrey Niffenegger</h5>
+                <h6>$10 - $27.8</h6>
+                <div class="shop-add-btn">
+                    <button class="add-to-cart" >Add to Cart</button>
+                    <button id="add-to-fav-shop"><img src="assets/add-to-favorites.png" alt=""></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="new-releases">
+        <h2>New Releases</h2>
+        <div class="subNavigation">
+            <a class="active-link" href="">History</a>
+            <a class="active-link" href="">Science & Math</a>
+            <a class="active-link" href="">Romance</a>
+        </div>
+        <div class="new-release-wrapper">
+            <div class="new-releases-right">
+                <div class="banner">
+                    <div class="banner-left">
+                        <img src="assets/million-dollar-dog-brand-book-design-guide-book.png" alt="million-dollar-dog-brand-book-design-guide-book">
+                    </div>
+                    <div class="banner-right">
+                        <h2>Get Extra</h2>
+                        <h1> Sale -25%</h1>
+                        <h3>ON ORDER OVER 100birr</h3>
+                        <button>View More</button>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="new-releases-left">
+                <div class="shop-container">
+                    <div class="shop-card">
+                        <img src="assets\Hip-Hop Is History.png" alt="lelaSewe">
+                        <h4>Hip hop</h4>
+                        <h5>Jessica</h5>
+                        <h6>$10 - $27.8</h6>
+                        <div class="shop-add-btn">
+                            <button class="add-to-cart" >Add to Cart</button>
+                            <button id="add-to-fav-shop"><img src="assets/add-to-favorites.png" alt=""></button>
+                        </div>
+                    </div>
+                    <div class="shop-card">
+                        <img src="assets\The Art of Marvel's Spider-Man 2.png" alt="harry potter">
+                        <h4>SpiderMan 2</h4>
+                        <h5>Bruice</h5>
+                        <h6>$30 - $47.8</h6>
+                        <div class="shop-add-btn">
+                            <button class="add-to-cart" >Add to Cart</button>
+                            <button id="add-to-fav-shop"><img src="assets/add-to-favorites.png" alt=""></button>
+                        </div>
+                    </div>
+                    <div class="shop-card">
+                        <img src="assets\The Color of Everything.png" alt="art of war">
+                        <h4>The color of Everything</h4>
+                        <h5>Cory</h5>
+                        <h6>$11 - $27.8</h6>
+                        <div class="shop-add-btn">
+                            <button class="add-to-cart" >Add to Cart</button>
+                            <button id="add-to-fav-shop"><img src="assets/add-to-favorites.png" alt=""></button>
+                        </div>
+                    </div>
+                    <div class="shop-card">
+                        <img src="assets\rom1.png" alt="art of war">
+                        <h4>It Ends With US</h4>
+                        <h5>Colleen Hoover</h5>
+                        <h6>$30 - $47.8</h6>
+                        <div class="shop-add-btn">
+                            <button class="add-to-cart" >Add to Cart</button>
+                            <button id="add-to-fav-shop"><img src="assets/add-to-favorites.png" alt=""></button>
+                        </div>
+                    </div>
+                    <div class="shop-card">
+                        <img src="assets\rom2.png" alt="art of war">
+                        <h4>It starts with us</h4>
+                        <h5>Coleen Hoover</h5>
+                        <h6>$30 - $47.8</h6>
+                        <div class="shop-add-btn">
+                            <button class="add-to-cart" >Add to Cart</button>
+                            <button id="add-to-fav-shop"><img src="assets/add-to-favorites.png" alt=""></button>
+                        </div>
+                    </div>
+                    <div class="shop-card">
+                        <img src="assets\pride and.jpg" alt="art of war">
+                        <h4>Pride and prejudice</h4>
+                        <h5>laura</h5>
+                        <h6>$10 - $27.8</h6>
+                        <div class="shop-add-btn">
+                            <button class="add-to-cart" >Add to Cart</button>
+                            <button id="add-to-fav-shop"><img src="assets/add-to-favorites.png" alt=""></button>
+                        </div>
+                    </div>
+                    <!-- Add more cards as needed -->
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+
+    <div class="fav-authors">
+        <h2>Favorite Authors</h2>
+<div id="author-container">
+    <div class="author-display" id="author1">
+        <img class="author-image" src="assets\Baalu Girma.png" alt="Author Image">
+        <h4 class="author-name">Bealu Girma</h4>
+        <h5 class="author-books">Published Books: 10</h5>
+    </div>
+    <div class="author-display" id="author2" style="display: none;">
+        <img class="author-image" src="assets\mammo-wudneh.png" alt="Author Image">
+        <h4 class="author-name">Mamo Wudneh</h4>
+        <h5 class="author-books">Published Books: 8</h5>
+    </div>
+    <div class="author-display" id="author3" style="display: none;">
+        <img class="author-image" src="assets\tsegaye gabre medhin.png" alt="Author Image">
+        <h4 class="author-name">Tesfaye GebreMedhin</h4>
+        <h5 class="author-books">Published Books: 15</h5>
+    </div>
+    <!-- Add more author divs as needed -->
+    <div id="author-navigation">
+        <button id="prev-author" onclick="showPreviousAuthor()">&#8249;</button>
+        <button id="next-author" onclick="showNextAuthor()">&#8250;</button>
+    </div>
+</div>
+       
+    </div>
+
+    <div class="author">
+        <h2>Favorite Authors</h2>
+    <div class="fav-authors-pc">
+        <div class="author-display-pc">
+            <img class="author-image" src="assets\Baalu Girma.png" alt="Author Image">
+            <h4 class="author-name">Bealu Girma</h4>
+            <h5 class="author-books">Published Books: 10</h5>
+        </div>
+        <div class="author-display-pc">
+            <img class="author-image" src="assets\mammo-wudneh.png" alt="Author Image">
+            <h4 class="author-name">Mamo Wudneh</h4>
+            <h5 class="author-books">Published Books: 8</h5>
+        </div>
+        <div class="author-display-pc">
+            <img class="author-image" src="assets\tsegaye gabre medhin.png" alt="Author Image">
+        <h4 class="author-name">Tesfaye GebreMedhin</h4>
+        <h5 class="author-books">Published Books: 15</h5>
+        </div>
+        <div class="author-display-pc">
+            <img src="assets\fyodor.png" alt="">
+            <h4>Fyodor Doestvesky</h4>
+            <h5>Published Book : 8</h5>
+        </div>
+        <div class="author-display-pc">
+            <img src="assets\dan.png" alt="">
+            <h4>Dan Brown</h4>
+            <h5>Published Book : 8</h5>
+        </div>
+    </div>
+    </div>
+    
+</div>
+</div>
+
+
+
+  
+    <!-- Overlay -->
+    <div class="overlay2"></div>
+
+    <!-- Cart slide -->
+    <div class="cart-slide" id="cart-slide">
+      <div class="close-btn" id="closeCart">×</div>
+      <h2>Your shopping cart</h2>
+    
+      <div class="bookcart">
+          <!-- Book items -->
+          <div class="book-item">
+              <img src="assets/art of war.jpg" alt="Book Cover" class="book-image">
+              <div class="book-details">
+                  <p class="book-type">Hardcover</p>
+                  <p class="book-title">The Great Gatsby</p>
+                  <p class="book-author">F. Scott Fitzgerald</p>
+                  <p class="book-amount">Quantity: 2</p>
+                  <p class="book-price">$20.00</p>
+              </div>
+          </div>
+          <div class="book-item">
+              <img src="assets/art of war.jpg" alt="Book Cover" class="book-image">
+              <div class="book-details">
+                  <p class="book-type">Hardcover</p>
+                  <p class="book-title">The Great Gatsby</p>
+                  <p class="book-author">F. Scott Fitzgerald</p>
+                  <p class="book-amount">Quantity: 2</p>
+                  <p class="book-price">$20.00</p>
+              </div>
+          </div>
+          <div class="book-item">
+              <img src="assets/art of war.jpg" alt="Book Cover" class="book-image">
+              <div class="book-details">
+                  <p class="book-type">Hardcover</p>
+                  <p class="book-title">The Great Gatsby</p>
+                  <p class="book-author">F. Scott Fitzgerald</p>
+                  <p class="book-amount">Quantity: 2</p>
+                  <p class="book-price">$20.00</p>
+              </div>
+          </div>
+          <!-- More items if needed -->
+      </div>
+    
+      <!-- Cart Summary -->
+      <div class="cart-summary">
+          <p class="subtotal">Subtotal: <span id="subtotal-amount">$60.00</span></p>
+          <button id="view-cart" class="cart-button">View Cart</button>
+          <button id="checkout" class="cart-button">Checkout</button>
+      </div>
+    </div>
+
+    <div id="last">
+
+    
+    <div class="newsletter">
+      <h1>Join Our Newsletter</h1>
+      <p>Signup to be the first to hear about exclusive deals, special offers and upcoming collection </p>
+        <form action="">
+          <input type="email" placeholder="Enter email for weekly news" >
+          <input type="submit" text="Subscribe">
+        </form>
+    </div>
+    <footer class="footer" id="footer">
+        <div class="fotter-content">
+          <h2>BOOKSTORE</h2>
+          <p>
+            Welcome to our bookstore, a haven for book lovers in Ethiopia. We are passionate about connecting readers with their next favorite book, offering a curated selection of literature, from timeless classics to contemporary bestsellers. Our mission is to foster a love for reading and provide a welcoming space where stories come alive. Whether you're seeking knowledge, adventure, or a quiet escape, you'll find it on our shelves. Join us in celebrating the joy of reading and discovering new worlds, one page at a time.
+          </p>
+    
+          <div class="icons">
+            <a href="http://"><img src="assets/facebook.svg" alt=""></a>
+            <a href="http://"><img src="assets/twitter.svg" alt=""></a>
+            <a href="http://"><img src="assets/instagram.svg" alt=""></a>
+            <a href="http://"><img src="assets/linkedin.svg" alt=""></a>
+          </div>
+        </div>
+        <div class="footer-content">
+          <h4>CONTACT</h4>
+          <p>
+            Address: Ethiopia, Addis Ababa<br>
+            Phone Numbers: +211 92 370 7040, +211 92 866 4558<br>
+            Email: TikureAbaybookstore@gmail.com
+          </p>
+        </div>
+      </footer>
+    
+      <div class="webRights">
+        <hr>
+        <p>COPYRIGHT &COPY;2023; Tikure Abay Bookstore. All rights reserved.</p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="homepage.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,116 @@
+/* Container for showcasing list items */
+.list-showcase {
+    display: flex; /* Flexbox layout for horizontal alignment */
+    justify-content: center; /* Center items horizontally */
+    gap: 0px; /* No gap between flex items */
+    margin: 50px 0; /* Space above and below the container */
+}
+
+/* Styling for file upload container */
+.list-file {
+    width: 400px; /* Fixed width for the file container */
+    height: 300px; /* Fixed height for the file container */
+    border: 1px solid #ccc; /* Light gray border around the container */
+    padding: 20px; /* Padding inside the container */
+    display: flex; /* Flexbox for centering content */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+}
+
+/* Styling for the file input field */
+.list-file input[type="file"] {
+    display: block; /* Block display for full width */
+    margin: auto; /* Center the input */
+    padding: 10px; /* Padding inside the input field */
+    font-size: 16px; /* Font size for the input text */
+    border: 1px solid #ccc; /* Light gray border around the input */
+    border-radius: 5px; /* Rounded corners for the input field */
+}
+
+/* Styling for list containers */
+.lists {
+    width: 700px; /* Fixed width for the list container */
+    padding: 50px; /* Padding inside the list container */
+    border: 1px solid #ccc; /* Light gray border around the container */
+}
+
+/* Label styling within lists */
+.lists label {
+    font-weight: bold; /* Bold text for labels */
+    margin-bottom: 5px; /* Space below labels */
+    display: block; /* Ensure label takes up full width */
+}
+
+/* Input, select, and textarea styling within lists */
+.lists input[type="text"],
+.lists select,
+.lists textarea {
+    width: 100%; /* Full width of the parent container */
+    padding: 10px; /* Padding inside the fields */
+    margin-bottom: 20px; /* Space below each field */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size for the input text */
+}
+
+/* Action button container */
+.action-btn {
+    display: flex; /* Flexbox layout for action buttons */
+    gap: 20px; /* Space between action buttons */
+    margin-top: 20px; /* Space above the buttons */
+    justify-content: space-between; /* Space out the buttons evenly */
+}
+
+/* Counter container for quantity selection */
+.counter-container {
+    display: flex; /* Flexbox layout for the counter */
+    align-items: center; /* Center content vertically */
+    border: 2px solid #ccc; /* Light gray border around the container */
+    border-radius: 5px; /* Rounded corners */
+    overflow: hidden; /* Hide overflow content */
+    width: 130px; /* Fixed width for the counter container */
+}
+
+/* Button styling within counter container */
+.counter-container button {
+    background-color: transparent; /* Transparent background */
+    color: black; /* Black text color */
+    border: none; /* Remove default button borders */
+    padding: 10px 15px; /* Padding inside buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 18px; /* Font size for the button text */
+}
+
+.counter-container button:focus {
+    outline: none; /* Remove focus outline */
+}
+
+/* Counter value display */
+#counter-value {
+    font-size: 20px; /* Larger font size for the counter value */
+    text-align: center; /* Center text horizontally */
+    min-width: 50px; /* Minimum width to ensure visibility */
+    color: #000; /* Black text color */
+}
+
+/* Action button styling for adding items to cart */
+#action-btn-cart {
+    width: 150px; /* Fixed width for the cart button */
+    height: 50px; /* Fixed height for the cart button */
+    background: #dbe7ff; /* Light blue background */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: larger; /* Larger font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+/* Hover effect for cart button */
+#action-btn-cart:hover {
+    background-color: #b0c7ff; /* Darker blue background on hover */
+}
+
+/* Product detail menu styling */
+.product-detail-menu {
+    margin-top: 50px; /* Space above the product detail menu */
+}

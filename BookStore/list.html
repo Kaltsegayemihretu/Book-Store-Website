@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOOKSTORE</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="list.css">
+    <link rel="script" href="product.js">
+    <link rel="script" href="list.js">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+
+            <button class="hamburger" id="hamburger-menu">☰</button>
+            <div class="logo">Bookstore</div>
+            <div class="nav-icons">
+                <!-- Replace with your custom icon images -->
+                <div class="can-we-help-you">
+                  <p>Can we help you?</p>
+                  <p>+25193934242</p>
+                </div>
+                <button class="icon" id="location-icon">
+                  <img src="assets/location-pin-svgrepo-com (1).svg" alt="Cart">
+              </button>               
+              <button class="icon" id="nav-fav-icon">
+                <img src="assets/heart-3510.svg" alt="Cart">
+            </button>
+                <button class="icon" id="cart-icon">
+                    <img src="assets/cart.png" alt="Cart">
+                </button>
+                <button class="icon" id="profile-icon">
+                    <img src="assets/profilePng.png" alt="Profile">
+                </button>
+            </div>
+        </div>
+        <hr id="nav-line">
+        <div class="search-box">
+            <input type="text" placeholder="Search..." id="searchInput">
+            <button id="searchBtn"><img src="assets/search-icon.png" style="width: 20px;" alt="search-icon"></button>
+        </div>  
+        <div class="pc-screen-nav">
+          <a href="#"  id="HomeButton">Home
+              <div class="dropdown-content">
+                  <a href="#">Sub-link 1</a>
+                  <a href="#">Sub-link 2</a>
+                  <a href="#">Sub-link 3</a>
+              </div>
+          </a>
+          <a href="#">Categories</a>
+          <a href="#" class="shop-button" id="shopButton">Shop
+              <div class="dropdown-content">
+                  <a href="#">Sub-link 1</a>
+                  <a href="#">Sub-link 2</a>
+                  <a href="#">Sub-link 3</a>
+              </div>
+          </a>
+          <a href="#">Pages
+              <div class="dropdown-content">
+                  <a href="#">Sub-link 1</a>
+                  <a href="#">Sub-link 2</a>
+                  <a href="#">Sub-link 3</a>
+              </div>
+          </a>
+          <a href="#">Blog
+              <div class="dropdown-content">
+                  <a href="#">Sub-link 1</a>
+                  <a href="#">Sub-link 2</a>
+                  <a href="#">Sub-link 3</a>
+              </div>
+          </a>
+          <a href="#">Others
+              <div class="dropdown-content">
+                  <a href="#">Sub-link 1</a>
+                  <a href="#">Sub-link 2</a>
+                  <a href="#">Sub-link 3</a>
+              </div>
+          </a>
+      </div>
+      
+        <div class="side-menu" id="side-menu">
+            <button class="close-btn" id="close-menu">×</button>
+            <div class="menu-title">Menu</div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div id="popup" class="hidden">
+      <p>Item was added to cart!</p>
+    </div>
+    <div class="overlay"></div>
+
+    <div class="login-form">
+      <div class="close-btn">&times;</div>
+        <h1 style="text-align: center;">BookStore</h1> 
+        <form action="#">
+            <div class="input-container">
+                <i class="fas fa-user"></i>
+                <input type="text" id="username" name="username" placeholder="Username" required>
+            </div>
+            
+     
+            
+            <div class="input-container">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+            </div>
+            
+    
+            
+            <div class="button-container">
+                <button type="submit" name="login">Log In</button>
+            </div>
+            <br><br>
+            <div class="login-container">
+                <p>Don't have an account? <button id="signupbtn" style="border:none;" >Sign up</button> </p>
+               
+            </div>
+        </form>
+    </div>
+
+    <div class="signup-form">
+      <div class="close-btn" id="closeBtn">&times;</div>
+  
+      <h1 class="signup-form__title">Create Your Account</h1>
+      <form id="signupForm" class="signup-form__form" action="#" method="post">
+          <div class="signup-form__field">
+              <label for="signup-username" class="signup-form__label">Username:</label>
+              <input type="text" id="signup-username" name="username" class="signup-form__input" placeholder="Enter your username" required>
+          </div>
+          <div class="signup-form__field">
+              <label for="signup-email" class="signup-form__label">Email:</label>
+              <input type="email" id="signup-email" name="email" class="signup-form__input" placeholder="Enter your email" required>
+          </div>
+          <div class="signup-form__field">
+              <label for="signup-password" class="signup-form__label">Password:</label>
+              <input type="password" id="signup-password" name="password" class="signup-form__input" placeholder="Enter your password" required>
+          </div>
+          <div class="signup-form__field">
+              <label for="signup-confirm-password" class="signup-form__label">Confirm Password:</label>
+              <input type="password" id="signup-confirm-password" name="confirm-password" class="signup-form__input" placeholder="Confirm your password" required>
+          </div>
+          <div class="signup-form__button-container">
+              <button type="submit" class="signup-form__button">Sign Up</button>
+          </div>
+      </form>
+      <p class="signup-form__text">Already have an account? <a href="#" id="loginLink" class="signup-form__link">Log in</a></p>
+  </div>
+      
+  <div class="list-container">
+    <h2 style="margin-left: 70px; font-weight: lighter;">List Product</h2>
+    <div class="list">
+        <div class="list-showcase">
+            <div class="list-file">
+                <input type="file" id="bookImage" name="bookImage" accept="image/*" required>
+            </div>
+            <div class="list-details">
+                <div class="lists">
+                    <form id="productForm">
+                        <label for="authorName">Author Name</label><br>
+                        <input type="text" id="authorName" name="authorName" required><br><br>
+                    
+                        <label for="title">Title</label><br>
+                        <input type="text" id="title" name="title" required><br><br>
+                    
+                        <label for="subtitle">Price</label><br>
+                        <input type="text" id="subtitle" name="subtitle"><br><br>
+                    
+                        <label for="coverType">Cover Type</label><br>
+                        <select id="coverType" name="coverType" required>
+                            <option value="hardcover">Hardcover</option>
+                            <option value="paperback">Paperback</option>
+                            <option value="ebook">Ebook</option>
+                        </select><br><br>
+                    
+                        <label for="description">Description</label><br>
+                        <textarea id="description" name="description" rows="4" cols="50" required></textarea><br><br>
+                    
+                        <div id="validation-messages" style="color: red; margin-bottom: 10px;"></div>
+                    
+                        <div class="action-btn">
+                            <div class="counter-container">
+                                <button type="button" id="minus-btn">-</button>
+                                <div id="counter-value">0</div>
+                                <button type="button" id="plus-btn">+</button>
+                            </div>  
+                            <button id="action-btn-cart" type="submit">List</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+  
+    <!-- Overlay -->
+    <div class="overlay2"></div>
+
+    <!-- Cart slide -->
+    <div class="cart-slide" id="cart-slide">
+      <div class="close-btn" id="closeCart">×</div>
+      <h2>Your shopping cart</h2>
+    
+      <div class="bookcart">
+          <!-- Book items -->
+          <div class="book-item">
+              <img src="assets/art of war.jpg" alt="Book Cover" class="book-image">
+              <div class="book-details">
+                  <p class="book-type">Hardcover</p>
+                  <p class="book-title">The Great Gatsby</p>
+                  <p class="book-author">F. Scott Fitzgerald</p>
+                  <p class="book-amount">Quantity: 2</p>
+                  <p class="book-price">$20.00</p>
+              </div>
+          </div>
+          <div class="book-item">
+              <img src="assets/art of war.jpg" alt="Book Cover" class="book-image">
+              <div class="book-details">
+                  <p class="book-type">Hardcover</p>
+                  <p class="book-title">The Great Gatsby</p>
+                  <p class="book-author">F. Scott Fitzgerald</p>
+                  <p class="book-amount">Quantity: 2</p>
+                  <p class="book-price">$20.00</p>
+              </div>
+          </div>
+          <div class="book-item">
+              <img src="assets/art of war.jpg" alt="Book Cover" class="book-image">
+              <div class="book-details">
+                  <p class="book-type">Hardcover</p>
+                  <p class="book-title">The Great Gatsby</p>
+                  <p class="book-author">F. Scott Fitzgerald</p>
+                  <p class="book-amount">Quantity: 2</p>
+                  <p class="book-price">$20.00</p>
+              </div>
+          </div>
+          <!-- More items if needed -->
+      </div>
+    
+      <!-- Cart Summary -->
+      <div class="cart-summary">
+          <p class="subtotal">Subtotal: <span id="subtotal-amount">$60.00</span></p>
+          <button id="view-cart" class="cart-button">View Cart</button>
+          <button id="checkout" class="cart-button">Checkout</button>
+      </div>
+    </div>
+
+    <div id="last">
+
+    
+    <div class="newsletter">
+      <h1>Join Our Newsletter</h1>
+      <p>Signup to be the first to hear about exclusive deals, special offers and upcoming collection </p>
+        <form action="">
+          <input type="email" placeholder="Enter email for weekly news" >
+          <input type="submit" text="Subscribe">
+        </form>
+    </div>
+    <footer class="footer" id="footer">
+        <div class="fotter-content">
+          <h2>BOOKSTORE</h2>
+          <p>
+            Welcome to our bookstore, a haven for book lovers in Ethiopia. We are passionate about connecting readers with their next favorite book, offering a curated selection of literature, from timeless classics to contemporary bestsellers. Our mission is to foster a love for reading and provide a welcoming space where stories come alive. Whether you're seeking knowledge, adventure, or a quiet escape, you'll find it on our shelves. Join us in celebrating the joy of reading and discovering new worlds, one page at a time.
+          </p>
+    
+          <div class="icons">
+            <a href="http://"><img src="assets/facebook.svg" alt=""></a>
+            <a href="http://"><img src="assets/twitter.svg" alt=""></a>
+            <a href="http://"><img src="assets/instagram.svg" alt=""></a>
+            <a href="http://"><img src="assets/linkedin.svg" alt=""></a>
+          </div>
+        </div>
+        <div class="footer-content">
+          <h4>CONTACT</h4>
+          <p>
+            Address: Ethiopia, Addis Ababa<br>
+            Phone Numbers: +211 92 370 7040, +211 92 866 4558<br>
+            Email: TikureAbaybookstore@gmail.com
+          </p>
+        </div>
+      </footer>
+    
+      <div class="webRights">
+        <hr>
+        <p>COPYRIGHT &COPY;2023; Tikure Abay Bookstore. All rights reserved.</p>
+      </div>
+    </div>
+    <script src="list.js"></script>
+    <script src="homepage.js"></script>
+
+</body>
+</html>
